@@ -47,14 +47,14 @@ if (!isset($_SESSION['email'])) {
                                 $total = 0;
                                 while ($row = mysqli_fetch_array($result)) {
                                     $id .= $row["id"] . ", ";
-                                    echo '<tr><td><a href="order.php">'. $row["Name"] . "</a></td><td>Rs. " . $row["Price"] . "</td>";
+                                    echo '<tr><td><a href="order.php">'. $row["Name"] . "</a></td><td>Da. " . $row["Price"] . "</td>";
                                     $total= $total + $row["Price"];
                                     while ($row1 = mysqli_fetch_array($result1) ) {
                                     echo"<td>" . $row1["Timedate"] . "</td></tr>"; 
                                     break;
                                 }
                                 }
-                                echo "<tr><td>Total</td>"."<td>Rs. ".$total."</td></tr>";
+                                echo "<tr><td>Total</td>"."<td>Da. ".$total."</td></tr>";
                                 ?>
                             </tbody>
                             <?php
